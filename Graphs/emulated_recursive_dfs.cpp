@@ -9,6 +9,7 @@ void DFS(vector<vector<int>> &g, int node) {
     while (!st.empty()) {
         int cnode = st.top().first;
         int index = st.top().second;
+        visit[cnode] = true;
 
         if (index < g[cnode].size()) {
             int adj = g[cnode][index];
